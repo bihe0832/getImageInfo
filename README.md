@@ -14,9 +14,9 @@ getImageInfo 是几款个人基于Java编写的获取图片信息（大小、透
 	│
 	├── getImgInfo：getImgInfo.jar源码
 	│
-	├── tinypng.jar：封装了tinypng，支持HTTP代理的图片压缩SDK的可执行jar
+	├── tinyjpg.jar：封装了tinyjpg，支持HTTP代理的图片压缩SDK的可执行jar
 	│
-	└── tinyjpg：tinypng.jar的源码
+	└── tinyjpg：tinyjpg.jar的源码
 
 ## 使用事例
 
@@ -30,7 +30,7 @@ getImageInfo 是几款个人基于Java编写的获取图片信息（大小、透
 	➜  getPNGInfo git:(master) ✗ java -jar ./getImgInfo.jar head.png
 	{"ret":0,"msg":"图片是否有渐变: true ,图片尺寸为(宽*高): 344 * 344 , 图片大小: 33 KB,图片类型: 6","hasAlpha":true,"type":6,"width":344,"height":344,"size":33}
 
-### tinypng.jar
+### tinyjpg.jar
 
 	➜  getPNGInfo git:(master) ✗ java -jar ./tinyjpg.jar ~/temp/1/head.jpg
 	tinypng_api_key:QVFA4tI-IBD6Ge4gcCqQX44xTderwr1f
