@@ -26,6 +26,7 @@ public class getPNGInfo {
 	public static final String KEY_RESULT_IMG_TYPE = "type";
 	public static final String KEY_RESULT_IMG_WIDTH = "width";
 	public static final String KEY_RESULT_IMG_HEIGHT = "height";
+	public static final String KEY_RESULT_IMG_SIZE = "size";
 	
 	public static void main(String[] params) throws Exception {
         if ((params.length == 0)) {
@@ -54,11 +55,13 @@ public class getPNGInfo {
 										",\""+ KEY_RESULT_MSG +"\":\"" +  
 											"图片是否有渐变: " + img.getColorModel().hasAlpha() + " ,"+  
 											"图片尺寸为(宽*高): " + img.getWidth() + " * " +  img.getHeight() + " , " +  
+											"图片大小: " + tempImg.length() / 1024 + " KB,"+  
 											"图片类型: " + img.getType() + "\"" +
 										",\""+ KEY_RESULT_HAS_ALPHA +"\":" +  img.getColorModel().hasAlpha() + 
 										",\""+ KEY_RESULT_IMG_TYPE +"\":" +  img.getType() + 
 										",\""+ KEY_RESULT_IMG_WIDTH +"\":" +  img.getWidth() + 
 										",\""+ KEY_RESULT_IMG_HEIGHT +"\":" +  img.getHeight() + 
+										",\""+ KEY_RESULT_IMG_SIZE +"\":" +  tempImg.length() / 1024 + 
 								"}\n"); 
 			} catch (Exception e) {
 				printFailedCheckResult(RET_GET_INFO_FAILED," get file :" + filepath +" info failed");
