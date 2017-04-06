@@ -1,0 +1,17 @@
+usage: 
+	
+	java -jar ./getPNGInfo.jar <command> [filePath]
+	java -jar ./getPNGInfo.jar --version
+	java -jar ./getPNGInfo.jar --help
+	  
+such as:
+
+	 
+	java -jar ./getPNGInfo.jar ./test.png
+	java -jar ./getPNGInfo.jar --version
+	java -jar ./getPNGInfo.jar --help
+	
+after check,the result will be a string json such as:
+
+	 {"ret":0,"msg":"图片是否有渐变: true ,图片尺寸为(宽*高): 432 * 168 , 图片类型: 6","hasAlpha":true,"type":6,"width":432,"height":168}
+	 
