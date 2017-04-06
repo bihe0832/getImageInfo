@@ -1,0 +1,15 @@
+usage: 
+	
+	java -jar ./tinyjpg.jar <command> [sourceFilePath] [targetFilePath]
+	java -jar ./tinyjpg.jar --version
+	java -jar ./tinyjpg.jar --help
+	java -jar ./tinyjpg.jar --env
+	  
+such as:
+	 
+	java -jar ./tinyjpg.jar ./test.png
+	java -jar ./tinyjpg.jar --version
+	java -jar ./tinyjpg.jar --help
+	java -jar ./tinyjpg.jar --env
+
+	 

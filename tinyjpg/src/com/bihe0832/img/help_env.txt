@@ -1,0 +1,14 @@
+tinypngDemo need your own api key get from tinypng homepage. 
+If you don't have one, you can get from it's homepage:
+
+	https://tinypng.com/developers
+	
+after you get your own api key, you need to add it to your evn.
+for iMac user, just input this command to you command line:
+
+	export tinypng_api_key=YOUR_API_KEY
+	
+if your server has an http proxy,just add is to your evn too.
+for iMac user, just input this command to you command line:
+
+	export http_proxy='http://your.proxy.com:8080'
