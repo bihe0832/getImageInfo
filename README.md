@@ -1,7 +1,60 @@
-## 背景
+## 简介
 
-### APK Signature Scheme v2官方介绍
+getPNGInfo 是一款个人基于Java编写的获取图片大小、透明度以及编码方案的工具，方便在命令行工具下查看图片信息。
 
+
+## 使用事例
+
+### 查看帮助
+
+	➜  getPNGInfo git:(master) ✗ java -jar ./getPNGInfo.jar
+	usage:
+	
+		java -jar ./getPNGInfo.jar <command> [filePath]
+		java -jar ./getPNGInfo.jar --version
+		java -jar ./getPNGInfo.jar --help
+	
+	such as:
+	
+	
+		java -jar ./getPNGInfo.jar ./test.png
+		java -jar ./getPNGInfo.jar --version
+		java -jar ./getPNGInfo.jar --help
+	
+	after check,the result will be a string json such as:
+	
+		 {"ret":0,"msg":"图片是否有渐变: true ,图片尺寸为(宽*高): 432 * 168 , 图片类型: 6","hasAlpha":true,"type":6,"width":432,"height":168}
+			
+			
+### 查看版本
+
+	➜  getPNGInfo git:(master) ✗ java -jar ./getPNGInfo.jar --version
+	class com.bihe0832.png.getPNGInfo version 1.0.0 (1)
+	
+	homepage : https://github.com/bihe0832/getPNGInfo
+	blog : http://blog.bihe0832.com
+	github : https://github.com/bihe0832
+		
+### 查看应用信息
+
+	➜  getPNGInfo git:(master) ✗ java -jar ./getPNGInfo.jar ~/temp/1/1.png
+	{"ret":0,"msg":"图片是否有渐变: true ,图片尺寸为(宽*高): 432 * 168 , 图片类型: 6","hasAlpha":true,"type":6,"width":432,"height":168}
+	
+	
+	
+## 返回参数说明
+
+### hasAlpha
+
+图片是否有透明度，是否有渐变效果
+
+### width & height
+
+图片的宽和高的像素数值
+
+### type
+
+图片的编码方案，具体值参考官网介绍：[https://docs.oracle.com/javase/7/docs/api/java/awt/image/BufferedImage.html](https://docs.oracle.com/javase/7/docs/api/java/awt/image/BufferedImage.html)，为了方便查看，个人用google翻译做了简单整理。
 
 - `TYPE_CUSTOM` = 0
 
@@ -58,48 +111,8 @@
 - `TYPE_BYTE_INDEXED` = 13
 
 	表示索引的字节图像。
- 
-## 使用事例
 
-#### 查看帮助
-
-	➜  java -jar CheckAndroidV2Signature.jar
-
-	usage: java -jar ./CheckAndroidV2Signature.jar [--version] [--help] [filePath]
-	
-	such as:
-	
-		 java -jar ./CheckAndroidV2Signature.jar --version
-		 java -jar ./CheckAndroidV2Signature.jar --help
-		 java -jar ./CheckAndroidV2Signature.jar ./test.apk
-	
-	after check,the result will be a string json such as:
-	
-		 {"ret":0,"msg":"ok","isV2":true,"isV2OK":true}
-	
-		 ret: result code for check
-	
-			 0 : command exec succ
-			 -1 : file not found
-			 -2 : file not an Android APK file
-			 -3 : check File signature error ,retry again
-	
-		 msg: result msg for check
-		 isV2: whether the file is use Android-V2 signature or not
-		 isV2OK: whether the file's Android-V2 signature is ok or not
-			
-			
-#### 查看版本
-
-	➜  java -jar ./CheckAndroidV2Signature.jar --version
-		com.tencent.ysdk.CheckAndroidV2Signature version 1.0.1 (CheckAndroidV2Signature - 2)
-		homepage : https://github.com/bihe0832/AndroidGetAPKInfo
-		blog : http://blog.bihe0832.com
-		github : https://github.com/bihe0832
 		
-#### 查看应用信息
+## 相关文章
 
-	➜  java -jar ./CheckAndroidV2Signature.jar ./YSDK_Android_1.3.1_629-debug-ysdktest-inner.apk
-	{"ret":0,"msg":"ok","isV2":false,"isV2OK":false}
-		
-
+- [如何生成混淆过的可执行的jar程序](http://blog.bihe0832.com/runnable-jar.html)
