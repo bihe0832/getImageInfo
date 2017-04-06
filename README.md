@@ -35,7 +35,7 @@ getPNGInfo 是一款个人基于Java编写的获取图片大小、透明度以�
 	blog : http://blog.bihe0832.com
 	github : https://github.com/bihe0832
 		
-### 查看应用信息
+### 查看图片信息
 
 	➜  getPNGInfo git:(master) ✗ java -jar ./getPNGInfo.jar ~/temp/1/1.png
 	{"ret":0,"msg":"图片是否有渐变: true ,图片尺寸为(宽*高): 432 * 168 , 图片类型: 6","hasAlpha":true,"type":6,"width":432,"height":168}
