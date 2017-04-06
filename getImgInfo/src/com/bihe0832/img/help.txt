@@ -1,15 +1,15 @@
 usage: 
 	
-	java -jar ./getPNGInfo.jar <command> [filePath]
-	java -jar ./getPNGInfo.jar --version
-	java -jar ./getPNGInfo.jar --help
+	java -jar ./getImgInfo.jar <command> [filePath]
+	java -jar ./getImgInfo.jar --version
+	java -jar ./getImgInfo.jar --help
 	  
 such as:
 
 	 
-	java -jar ./getPNGInfo.jar ./test.png
-	java -jar ./getPNGInfo.jar --version
-	java -jar ./getPNGInfo.jar --help
+	java -jar ./getImgInfo.jar ./test.png
+	java -jar ./getImgInfo.jar --version
+	java -jar ./getImgInfo.jar --help
 	
 after check,the result will be a string json such as:
 

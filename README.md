@@ -1,36 +1,36 @@
 ## 简介
 
-getPNGInfo 是一款个人基于Java编写的获取图片大小、透明度以及编码方案的工具，方便在命令行工具下查看图片信息。
+getImageInfo 是一款个人基于Java编写的获取图片大小、透明度以及编码方案的工具，方便在命令行工具下查看图片信息。
 
 ### 目录介绍
 
 	├── README.md	：项目介绍
 	│
-	├── getPNGInfo.jar：可执行jar
+	├── getImgInfo.jar：可执行jar
 	│
 	├── head.jpg：非透明渐变图片事例
 	│
 	├── head.png：透明渐变图片事例
 	│
-	└── src：工具源码
+	└── getImgInfo：工具源码
 
 ## 使用事例
 
 ### 查看帮助
 
-	➜  getPNGInfo git:(master) ✗ java -jar ./getPNGInfo.jar
+	➜  getPNGInfo git:(master) ✗ java -jar ./getImgInfo.jar
 	usage:
 	
-		java -jar ./getPNGInfo.jar <command> [filePath]
-		java -jar ./getPNGInfo.jar --version
-		java -jar ./getPNGInfo.jar --help
+		java -jar ./getImgInfo.jar <command> [filePath]
+		java -jar ./getImgInfo.jar --version
+		java -jar ./getImgInfo.jar --help
 	
 	such as:
 	
 	
-		java -jar ./getPNGInfo.jar ./test.png
-		java -jar ./getPNGInfo.jar --version
-		java -jar ./getPNGInfo.jar --help
+		java -jar ./getImgInfo.jar ./test.png
+		java -jar ./getImgInfo.jar --version
+		java -jar ./getImgInfo.jar --help
 	
 	after check,the result will be a string json such as:
 	
@@ -39,19 +39,19 @@ getPNGInfo 是一款个人基于Java编写的获取图片大小、透明度以�
 			
 ### 查看版本
 
-	➜  getPNGInfo git:(master) ✗ java -jar ./getPNGInfo.jar --version
-	class com.bihe0832.png.getPNGInfo version 1.0.0 (1)
+	➜  getPNGInfo git:(master) ✗ java -jar ./getImgInfo.jar --version
+	class com.bihe0832.png.getImgInfo version 1.0.1 (2)
 	
-	homepage : https://github.com/bihe0832/getPNGInfo
+	homepage : https://github.com/bihe0832/getImageInfo
 	blog : http://blog.bihe0832.com
 	github : https://github.com/bihe0832
 		
 ### 查看图片信息
 
-	➜  getPNGInfo git:(master) ✗ java -jar ./getPNGInfo.jar head.jpg
+	➜  getPNGInfo git:(master) ✗ java -jar ./getImgInfo.jar head.jpg
 	{"ret":0,"msg":"图片是否有渐变: false ,图片尺寸为(宽*高): 344 * 344 , 图片大小: 7 KB,图片类型: 5","hasAlpha":false,"type":5,"width":344,"height":344,"size":7}
 	
-	➜  getPNGInfo git:(master) ✗ java -jar ./getPNGInfo.jar head.png
+	➜  getPNGInfo git:(master) ✗ java -jar ./getImgInfo.jar head.png
 	{"ret":0,"msg":"图片是否有渐变: true ,图片尺寸为(宽*高): 344 * 344 , 图片大小: 33 KB,图片类型: 6","hasAlpha":true,"type":6,"width":344,"height":344,"size":33}
 		
 	

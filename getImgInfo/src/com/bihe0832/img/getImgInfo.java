@@ -1,4 +1,4 @@
-package com.bihe0832.png;
+package com.bihe0832.img;
 
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
@@ -9,10 +9,9 @@ import java.nio.charset.StandardCharsets;
 
 import javax.imageio.ImageIO;
 
-public class getPNGInfo {
-
-	private static final int VERSION_CODE = 1;
-	private static final String VERSION_NAME = "1.0.0";
+public class getImgInfo {
+	private static final int VERSION_CODE = 2;
+	private static final String VERSION_NAME = "1.0.1";
 	private static final String HELP_PAGE_GENERAL = "help.txt";
 	private static final String VERSION_PAGE_GENERAL = "help_version.txt";
 	
@@ -37,7 +36,7 @@ public class getPNGInfo {
             printUsage(HELP_PAGE_GENERAL);
             return;
         } else if (params[0].toLowerCase().startsWith("--version")) {
-    		System.out.println(getPNGInfo.class.toString() + " version " + VERSION_NAME + " (" + VERSION_CODE + ")\n");
+    		System.out.println(getImgInfo.class.toString() + " version " + VERSION_NAME + " (" + VERSION_CODE + ")\n");
     		printUsage(VERSION_PAGE_GENERAL);
             return;
         } else{
@@ -79,7 +78,7 @@ public class getPNGInfo {
         try (BufferedReader in =
                 new BufferedReader(
                         new InputStreamReader(
-                                getPNGInfo.class.getResourceAsStream(page),
+                        		getImgInfo.class.getResourceAsStream(page),
                                 StandardCharsets.UTF_8))) {
             String line;
             while ((line = in.readLine()) != null) {
@@ -97,3 +96,4 @@ public class getPNGInfo {
         }
     }
 }
+
