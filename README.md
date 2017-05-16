@@ -46,3 +46,5 @@ getImageInfo 是几款个人基于Java编写的获取图片信息（大小、透
 - [如何生成混淆过的可执行的jar程序](http://blog.bihe0832.com/runnable-jar.html)
 
 - [iMac下制作含透明度图片及判断图片透明度](http://blog.bihe0832.com/png_alpha.html)
+
+- [Android安装包精简系列之图片优化](http://blog.bihe0832.com/android-optimize-img.html)
